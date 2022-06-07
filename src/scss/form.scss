@@ -1,0 +1,127 @@
+
+@mixin getStepNums($num) {
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) .step__circle::after {
+      content: "#{$i}";
+      color: gray;
+      position: absolute;
+      top: 22%;
+      left: 38%;  
+    }
+  }
+}
+main{
+  margin-left: 15px;
+}
+.step__text{
+  display: none;
+}
+.steps{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.step{
+  position: relative;
+  @include getStepNums(3);
+  &.checked .step__circle::after{
+    content: "\2714";
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    font-size: 25px;
+    color: white;
+  }
+
+  &.active .step__line,
+  &.checked .step__line{
+    background-color: black;
+    opacity: 1;
+  }
+  &.active .step__circle::after{
+    color: white;
+  }
+
+  &__circle{
+    width: 32px;
+    height: 32px;
+    border-radius:50% ;
+    border: 1px solid gray;
+  }
+  &.active .step__circle,
+  &.checked .step__circle{
+    background-color: black;
+    color: white;
+  }
+
+  &__line{
+    position: absolute;
+    width: 190%;
+    top: 50%;
+    left: -290%;
+    height: 1px;
+    background-color: gray;
+    opacity: .3;
+  }
+}
+
+
+@media screen and (min-width:375px) {
+
+  @mixin getStepNums($num) {
+    @for $i from 1 through $num {
+      &:nth-child(#{$i}) .step__circle::after {
+        content: "#{$i}";
+        color: gray;
+        position: absolute;
+        top: 12%;
+        left: 5%;  
+      }
+    }
+  }
+   
+   main{
+     display: grid;
+     grid-template-columns: repeat(12,1fr);
+     grid-template-rows: repeat(4,130px);
+   }
+   .step-container{
+    grid-column: 3/7;
+   }
+   
+   .steps{
+   all:unset;
+    width: 95%;
+    display: flex;
+   }
+  .step__text{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20%;
+  }
+  .step{
+    width: 33%;
+    @include getStepNums(3);
+    &__circle{
+      width: 24px;
+      height: 24px;
+    }
+    &__line{
+      width: 30%;
+      left: -35%;
+    }
+    &.checked .step__circle::after{
+      content: "\2714";
+      color: white;
+      position: absolute;
+      transform: translate(-20%,-20%);
+    }
+    &.active .step__circle::after{
+      color: white;
+    }
+  }
+ 
+ 
+
+}
