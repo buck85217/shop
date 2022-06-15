@@ -184,17 +184,10 @@ input[type="radio"]{
   margin: 15px 0;
 }
 .btn-group{
-  flex-direction: column;
   grid-column: 5/7;
    grid-row: 4/5;
   place-self: end;
   margin-left: 20px;
-  align-items: stretch;
-}
-.pre{
-  position: absolute;
-  left: 20%;
-  top: 59%;
 }
 .item__price{
   text-align: left;
@@ -207,5 +200,8 @@ input[type="radio"]{
   position: absolute;
   top: 2%;
   right: 5%;
+}
+.pre{
+  margin-left: 50px;
 }
 }
