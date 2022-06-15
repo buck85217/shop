@@ -137,7 +137,7 @@ input[type="radio"]{
 .price{
   display: flex;
   justify-content: space-between;
-  width: 92%;
+  width: 75%;
   margin-bottom: 20px;
 }
 .bold{
@@ -163,11 +163,11 @@ input[type="radio"]{
 @media screen and (min-width:375px) {
   
 .form-container{
-  grid-column: 3/7;
+  grid-column: 1/2;
   grid-row: 2/3;
 }
 .shop-container{
-  grid-column: 8/12;
+  grid-column: 2/2;
   grid-row: 2/3;
 }
 .send{
@@ -184,10 +184,13 @@ input[type="radio"]{
   margin: 15px 0;
 }
 .btn-group{
-  grid-column: 5/7;
+  grid-column: 1/2;
    grid-row: 4/5;
   place-self: end;
   margin-left: 20px;
+}
+.item__pic{
+  width: 100px;
 }
 .item__price{
   text-align: left;

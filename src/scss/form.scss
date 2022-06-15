@@ -11,7 +11,7 @@
   }
 }
 main{
-  margin-left: 15px;
+  margin-left: 160px;
 }
 .step__text{
   display: none;
@@ -82,11 +82,13 @@ main{
    
    main{
      display: grid;
-     grid-template-columns: repeat(12,1fr);
+     grid-template-columns: repeat(2, 1fr);
      grid-template-rows: repeat(4,130px);
+     max-width: 1440px;
+     margin: 0 auto;
    }
    .step-container{
-    grid-column: 3/7;
+    grid-column: 1/2;
    }
    
    .steps{
