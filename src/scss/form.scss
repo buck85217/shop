@@ -10,9 +10,7 @@
     }
   }
 }
-main{
-  margin-left: 160px;
-}
+
 .step__text{
   display: none;
 }
@@ -84,7 +82,7 @@ main{
      display: grid;
      grid-template-columns: repeat(2, 1fr);
      grid-template-rows: repeat(4,130px);
-     max-width: 1440px;
+     max-width: 1100px;
      margin: 0 auto;
    }
    .step-container{
