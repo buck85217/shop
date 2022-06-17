@@ -94,31 +94,28 @@ nav{
   .img-container{
     width: 169.83px;
     height: 30px;
-    grid-column: 7/8;
+    margin-right: 250px;
   }
   .navbar-toggle-label,.nav-wraper>li::after{
     display: none;
   }
   header{
- 
-    height: 60px;
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
+    display: flex;
     align-items: center;
   }
   nav{
-    grid-column: 3/6;
+    width: 30%;
+    margin-left: 220px;
     .nav-wraper{
       display: flex;
-      justify-content: space-between;
+    justify-content: space-between;
     }
   }
  .icons{
-  display: flex;
-  width: 50%;
-  grid-column: 10/12;
-  place-self: center;
-  justify-content: space-between;
+  width: 20%;
  }
 
+ .fa-cart-shopping{
+  margin: 0 15px;
+ }
 }
