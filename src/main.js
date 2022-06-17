@@ -89,11 +89,13 @@ function preChange(e){
 }
 function button (){
   if(num === 0){
-    pre.classList.add('v-none')
+    pre.classList.add('d-none')
+    pre.style.visibility=" hidden";
     next.style = "width:90%";
     next.innerHTML = `下一步<span class="ml-2">&rarr;</span>`;
   } else if(num === 1){
-    pre.classList.remove('v-none')
+    pre.classList.remove('d-none')
+    pre.style.visibility="visible";
     next.style = "width:45%";
     next.innerHTML = `下一步<span class="ml-2">&rarr;</span>`;
   } else if(num === 2) {
