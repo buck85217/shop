@@ -26,10 +26,10 @@ const money = document.querySelector('.price-total')
 
 
 
+
+
 function nextChange(e){
   e.preventDefault()
-  console.log(num)
-  console.log(page)
  if(page === 0){
   step[0].classList.add('active')
   part[0].classList.remove('d-none')
@@ -62,8 +62,6 @@ function nextChange(e){
 }
 function preChange(e){
   e.preventDefault()
-  console.log(num)
-  console.log(page)
   if(page === 2) {
     step[0].classList.add('active')
     step[0].classList.remove('checked')
@@ -91,11 +89,11 @@ function preChange(e){
 }
 function button (){
   if(num === 0){
-    pre.classList.add('d-none')
+    pre.classList.add('v-none')
     next.style = "width:90%";
     next.innerHTML = `下一步<span class="ml-2">&rarr;</span>`;
   } else if(num === 1){
-    pre.classList.remove('d-none')
+    pre.classList.remove('v-none')
     next.style = "width:45%";
     next.innerHTML = `下一步<span class="ml-2">&rarr;</span>`;
   } else if(num === 2) {
@@ -140,7 +138,6 @@ function calc(e){
     tem2=tem1*1+tem*1
     money.innerHTML=`<span>$</span>${tem2.toLocaleString('en-US')}`
 }
-
 
 
 

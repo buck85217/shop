@@ -60,6 +60,9 @@ input:required {
 input:invalid {
   box-shadow: none;
 }
+.v-none{
+  visibility: hidden;
+}
 .d-none {
   display: none;
 }
