@@ -160,6 +160,7 @@ input[type="radio"]{
 }
 
 
+
 @media screen and (min-width:375px) {
   
 .form-container{
@@ -210,4 +211,8 @@ input[type="radio"]{
 .next{
   max-width: 40%;
  }
+ .v-none{
+  visibility: hidden;
+  display: block;
+ } 
 }
